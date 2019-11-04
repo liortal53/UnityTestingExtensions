@@ -1,8 +1,7 @@
 {
     "name": "UnityTestExtensions.Runtime",
     "references": [
-        "UnityEngine.TestRunner",
-        "UnityEditor.TestRunner"
+        "UnityEngine.TestRunner"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

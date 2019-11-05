@@ -1,9 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using UnityEditor.TestTools.TestRunner.Api;
+using NUnit.Framework.Interfaces;
 using UnityEngine;
+using UnityEngine.TestRunner;
 using UnityEngine.TestTools;
+using UnityTestExtensions;
+
+[assembly: TestRunCallback(typeof(LogAssertEx.LogAssertionCallbacks))]
 
 namespace UnityTestExtensions
 {
@@ -12,24 +16,24 @@ namespace UnityTestExtensions
     /// </summary>
     public static class LogAssertEx
     {
-        private class LogAssertionCallbacks : ICallbacks
+        public class LogAssertionCallbacks : ITestRunCallback
         {
-            public void RunStarted(ITestAdaptor testsToRun)
+            public void RunStarted(ITest testsToRun)
             {
                 ignoredMessages.Clear();
             }
 
-            public void RunFinished(ITestResultAdaptor result)
+            public void RunFinished(ITestResult testResults)
             {
                 ignoredMessages.Clear();
             }
 
-            public void TestStarted(ITestAdaptor test)
+            public void TestStarted(ITest test)
             {
                 ignoredMessages.Clear();
             }
 
-            public void TestFinished(ITestResultAdaptor result)
+            public void TestFinished(ITestResult result)
             {
                 ignoredMessages.Clear();
             }
@@ -38,16 +42,8 @@ namespace UnityTestExtensions
         private static readonly Dictionary<LogType, List<Regex>> ignoredMessages =
             new Dictionary<LogType, List<Regex>>();
 
-        private static readonly ICallbacks callbacks;
-
         static LogAssertEx()
         {
-            callbacks = new LogAssertionCallbacks();
-
-            // Register to receive callbacks, so the log assertion data is cleared before every test execution.
-            var api = ScriptableObject.CreateInstance<TestRunnerApi>();
-            api.RegisterCallbacks(callbacks);
-
             Application.logMessageReceived += OnLogReceived;
         }
 

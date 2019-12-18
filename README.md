@@ -28,9 +28,7 @@ This repository contains extensions and helpers for the [Unity Test Framework](h
 
 ## Installation
 
-There are a few options for installing this library in your project.
-
-This project depends on havingBefore using this library, you Download and install LTS version 10.15.x of Node.js from the [Node.JS website](https://nodejs.org/en/download/).
+There are a few options for installing this library in your project (see below).
 
 #### Prerequisities
 

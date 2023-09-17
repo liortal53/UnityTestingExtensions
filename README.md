@@ -55,8 +55,7 @@ Adding the ability to execute edit mode or play mode tests from a menu item.
 Also, the static method used for launching tests from the menu item can be re-used and executed when running tests from the command line in batch mode.
 
 ## Contributors
-Contributions are welcome! Before submitting pull requests please note the Submission of Contributions section of the Apache 2.0 license.
-
+Contributions are welcome! Feel free to submit a new pull request with your suggested changes!
 ## Contact
 Feel free to reach out with any question, comment or feedback:
 
@@ -65,4 +64,4 @@ Feel free to reach out with any question, comment or feedback:
 
 ## License
 
-Apache-2.0 © [Unity Technologies](http://www.unity3d.com)
+Distributed under the [MIT License](https://opensource.org/license/mit/). See `LICENSE` for more information.

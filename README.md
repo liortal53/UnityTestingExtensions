@@ -1,5 +1,5 @@
 
-#  Unity Test Extensions
+# Unity Test Extensions
 > A set of extensions and helpers for the Unity Test Framework.
 
 ## Overview
@@ -13,15 +13,15 @@ This repository contains extensions and helpers for the [Unity Test Framework](h
 
 ### Table of Contents
 * [Installation](#installation)
-	* [Prerequisites](#prerequisities)
-    * [Install from Unity Package Manager](#Install-from-unity-package-manager)
+	* [Prerequisites](#prerequisites)
+    * [Install from Unity Package Manager](#install-from-unity-package-manager)
     * [Install from GitHub source](#install-from-github-source)
 * [Features](#features)
 	* [LogAssertEx](#logassertex)
 	* [Running tests from a menu item](#running-tests-from-a-menu-item)
 * [Coming Soon](#coming-soon)
 	* Scoped Assertions
-	* Build a player for tests (split build & run
+	* Build a player for tests (split build & run)
 * [Contributors](#contributors)
 * [Contact](#contact)
 * [License](#license)
@@ -30,7 +30,7 @@ This repository contains extensions and helpers for the [Unity Test Framework](h
 
 There are a few options for installing this library in your project (see below).
 
-#### Prerequisities
+#### Prerequisites
 
 In order to use this library, you must install the following:
 
@@ -44,7 +44,7 @@ TBD
 TBD
 
 ## Features
-The following section lists the avaailble features as well as planed ones.
+The following section lists the available features as well as planned ones.
 
 ### LogAssertEx
 Updates and enhancements to the [LogAssert](https://docs.unity3d.com/Packages/com.unity.test-framework@1.1/manual/reference-custom-assertion.html#logassert) class.
